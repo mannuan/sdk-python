@@ -9,32 +9,15 @@ class ARIMAModel(object):
 
     #preData : [float]
     def preFirstDifference(self, preData):
-        tempData =
+        tempData = [0]*(len(preData)-1)
+        for index in range(len(preData)):
+            tempData[index] = preData[index+1] - preData[index]
+        return tempData
 
-
-    double[]
-    tempData = new
-    double[preData.length - 1];
-    for (int index = 0; index < preData.length - 1; index++){
-        tempData[index] = preData[index + 1] - preData[index];
-    }
-    return tempData;
-    }
-
-    public
-    double[]
-    preSeasonDifference(double[]
-    preData, int
-    period){
-    / **
-    * @ method: preSeasonDifference
-    * @ param: preData
-    原始数据集
-    * @ param: period
-    差分的周期
-    * @ return: double[]
-    * @ description: 用后period数据减去当前数据, 消除季节性差异
-    * /
+    #preData : [float]
+    #period : int
+    def preSeasonDifference(self, preData, period):
+        tempData = 
 
     // 用后period个数据减去当前数据, 有period数据不可用
     double[]
