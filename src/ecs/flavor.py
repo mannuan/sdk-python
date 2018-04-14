@@ -2,6 +2,9 @@
 
 class Flavor(object):
 
+    def __init__(self):
+        pass
+
     '''
     flavorName : str
     cpu : int
